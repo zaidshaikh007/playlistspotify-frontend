@@ -79,7 +79,7 @@ const Dashboard = () => {
               </div>
               {
                 objForm.formState.errors["title"]?.message &&
-                <span className="text-red-600 text-xl">{objForm.formState.errors["title"]?.message}</span>
+                <span className="text-red-600 text-sm">{objForm.formState.errors["title"]?.message}</span>
               }
             </div>
 
@@ -92,7 +92,7 @@ const Dashboard = () => {
               </div>
               {
                 objForm.formState.errors["description"]?.message &&
-                <span className="text-red-600 text-xl">{objForm.formState.errors["description"]?.message}</span>
+                <span className="text-red-600 text-sm">{objForm.formState.errors["description"]?.message}</span>
               }
             </div>
 

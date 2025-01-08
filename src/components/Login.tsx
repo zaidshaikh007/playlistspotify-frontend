@@ -51,7 +51,7 @@ const Login = () => {
                 </div>
                 {
                   objForm.formState.errors["email"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["email"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["email"]?.message}</span>
                 }
               </div>
 
@@ -64,7 +64,7 @@ const Login = () => {
                 </div>
                 {
                   objForm.formState.errors["password"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["password"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["password"]?.message}</span>
                 }
               </div>
 

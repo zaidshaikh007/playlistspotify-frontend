@@ -54,7 +54,7 @@ const Registration = () => {
                 </div>
                 {
                   objForm.formState.errors["firstName"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["firstName"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["firstName"]?.message}</span>
                 }
               </div>
 
@@ -65,7 +65,7 @@ const Registration = () => {
                 </div>
                 {
                   objForm.formState.errors["email"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["lastName"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["lastName"]?.message}</span>
                 }
               </div>
 
@@ -76,7 +76,7 @@ const Registration = () => {
                 </div>
                 {
                   objForm.formState.errors["email"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["email"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["email"]?.message}</span>
                 }
               </div>
 
@@ -87,7 +87,7 @@ const Registration = () => {
                 </div>
                 {
                   objForm.formState.errors["mobile"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["mobile"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["mobile"]?.message}</span>
                 }
               </div>
 
@@ -100,7 +100,7 @@ const Registration = () => {
                 </div>
                 {
                   objForm.formState.errors["createPassword"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["createPassword"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["createPassword"]?.message}</span>
                 }
               </div>
 
@@ -113,7 +113,7 @@ const Registration = () => {
                 </div>
                 {
                   objForm.formState.errors["confirmPassword"]?.message &&
-                  <span className="text-red-600 text-xl">{objForm.formState.errors["confirmPassword"]?.message}</span>
+                  <span className="text-red-600 text-sm">{objForm.formState.errors["confirmPassword"]?.message}</span>
                 }
               </div>
 
