@@ -24,9 +24,7 @@ const Login = () => {
       localStorage.setItem("token", userData.data.data);
       objForm.reset();
       toast.success("Login Successfull");
-      setTimeout(() => {
-        navigate("/dashboard");
-      }, 200);
+      navigate("/dashboard");
     }catch(e){
       console.log(e);
       toast.error("Invalid Credential");

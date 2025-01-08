@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   const [open, setOpen] = useState(false);
   const [playlists, setPlayLists] = useState([]);
-
+  const token = localStorage.getItem("token");
   const objForm = useForm({
     defaultValues: {
       title: '',
@@ -30,8 +30,10 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
-    fetchData();
-  }, [])
+    if(token){
+      fetchData();
+    }
+  }, [token])
 
   const handleClose = () => {
     setOpen(false);
