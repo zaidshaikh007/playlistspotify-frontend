@@ -1,20 +1,12 @@
 import axios from "axios"
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
-
-
-const axiosInstance = axios.create({
-    baseURL: process.env.REACT_APP_API_URL,
-    headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },
-});
-
-
 export const userLogin = async (email: string, password: string) => {
     let data = await axios.post("api/user/login", { email, password });
     return data;
 }
 export const userProfile = async () => {
-    let data = await axiosInstance.get("api/user/profile");
+    let data = await axios.get("api/user/profile", {headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
     return data;
 }
 
@@ -24,28 +16,28 @@ export const userRegister = async (firstName: string, lastName: string, email: s
 }
 
 export const getDashBoardData = async () => {
-    let data = await axiosInstance.get(`api/playlist/getplaylistdata`);
+    let data = await axios.get(`api/playlist/getplaylistdata`, {headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
     return data;
 }
 
 export const addPlaylistData = async (title: string, description: string) => {
-    let data = await axiosInstance.post("api/playlist/addplaylist", { title, description });
+    let data = await axios.post("api/playlist/addplaylist", { title, description }, {headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
     return data;
 }
 
 export const getPlayListSongs = async (id: string) => {
-    let data = await axiosInstance.get(`api/playlist/getplaylistsongs?id=${id}`);
+    let data = await axios.get(`api/playlist/getplaylistsongs?id=${id}`, {headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
     return data;
 }
 
 export const searchSongsData = async (input: string) => {
-    let data = await axiosInstance.get(`api/playlist/searchsong?name=${input}`);
+    let data = await axios.get(`api/playlist/searchsong?name=${input}`, {headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
     return data;
 }
 
 export const addSongToPlaylist = async (song: any, id: string) => {
     console.log('id: ', id);
     console.log('song: ', song);
-    let data = await axiosInstance.post("api/playlist/addsongtoplaylist", { song, id });
+    let data = await axios.post("api/playlist/addsongtoplaylist", { song, id }, {headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }});
     return data;
 }
